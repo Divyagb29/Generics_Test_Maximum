@@ -21,4 +21,17 @@ public class FindMaximum {
         }
         return max;
     }
+    public String getMaxString(String firstString, String secondString, String thirdString)
+    {
+        if(firstString.length() > secondString.length() && secondString.length() > thirdString.length()) {
+            return firstString;
+        }
+        if (secondString.length() > 0) {
+            return secondString;
+        }
+        else {
+            return thirdString;
+        }
+    }
+
 }

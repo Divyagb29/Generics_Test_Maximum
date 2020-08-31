@@ -1,6 +1,5 @@
 package com.generic.test;
 
-
 import com.generic.code.FindMaximum;
 import org.junit.Assert;
 import org.junit.Before;
@@ -47,4 +46,24 @@ public class FindMaxTest {
         float maximumNumber =findMaximum.findMaxFloat(2.8f,5.3f,10.9f);
         Assert.assertEquals(10.9, maximumNumber,.1);
     }
+
+    @Test
+    public void testMaximumStringFirstPosition()
+    {
+        String maximumString = findMaximum.getMaxString("banana","apple","kivi");
+        Assert.assertEquals("banana",maximumString);
+    }
+    @Test
+    public void testMaximumStringSecondPosition()
+    {
+        String maximumString = findMaximum.getMaxString("apple","banana","kivi");
+        Assert.assertEquals("banana",maximumString);
+    }
+    @Test
+    public void testMaximumStringThirdPosition()
+    {
+        String maximumString = findMaximum.getMaxString("kivi","banana","apple");
+        Assert.assertEquals("banana",maximumString);
+    }
+
 }
